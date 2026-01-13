@@ -10,6 +10,7 @@ const followersEl = document.getElementById("followers");
 const reposEl = document.getElementById("repos");
 const profileLink = document.getElementById("profileLink");
 const closeBtn = document.getElementById("closeBtn");
+const savedTheme = localStorage.getItem("theme");
 
 
 searchBtn.addEventListener("click", () => {
@@ -27,8 +28,18 @@ input.addEventListener("keydown", (e) => {
   }
 });
 
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+}
+
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
 
 
