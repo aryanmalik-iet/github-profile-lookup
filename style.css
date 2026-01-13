@@ -33,8 +33,50 @@ body {
   justify-content: center;
   transition: background 0.3s, color 0.3s;
 }
+.theme-switch {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 64px;
+  height: 28px;
+  background: #e8eaed;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.theme-switch span {
+  font-size: 13px;
+  color: #5f6368;
+  z-index: 2;
+  user-select: none;
+}
+
+.switch-thumb {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #000;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: left 0.25s ease;
+}
+
+/* Dark mode */
+
+
+body.dark .switch-thumb {
+  left: 38px;
+}
+
+
 
 .app-container {
+  position: relative;
   width: 100%;
   max-width: 420px;
   padding: 24px;

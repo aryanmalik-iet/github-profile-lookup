@@ -2,7 +2,7 @@ const input = document.getElementById("usernameInput");
 const searchBtn = document.getElementById("searchBtn");
 const card = document.getElementById("profileCard");
 const errorBox = document.getElementById("error");
-
+const themeToggle = document.getElementById("themeToggle");
 const avatar = document.getElementById("avatar");
 const nameEl = document.getElementById("name");
 const bioEl = document.getElementById("bio");
@@ -26,6 +26,11 @@ input.addEventListener("keydown", (e) => {
     searchBtn.click();
   }
 });
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
 
 closeBtn.addEventListener("click", resetView);
 
