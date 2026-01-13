@@ -3,7 +3,7 @@
   --card-bg: #f8f9fa;
   --text-color: #202124;
   --muted-text: #5f6368;
-  --accent: #1a73e8; /* Google Blue */
+  --accent: linear-gradient(45deg, #4063ff, #6783ff); /* Google Blue */
   --error: #d93025;
 }
 
@@ -11,8 +11,8 @@ body.dark {
   --bg-color: #0b0f14;
   --card-bg: #141a22;
   --text-color: #e8eaed;
-  --muted-text: #9aa0a6;
-  --accent: #00e5ff; /* Arcade Neon Blue */
+  --muted-text: #c8cbce;
+  --accent: linear-gradient(45deg, #ff4081, #ff80ab); /* Arcade Neon Blue */
   --error: #ff5252;
 }
 
@@ -34,11 +34,12 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 .theme-switch {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 64px;
-  height: 28px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 69px;
+  height: 35px;
   background: #e8eaed;
   border-radius: 20px;
   display: flex;
@@ -57,18 +58,16 @@ body {
 
 .switch-thumb {
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   background: #000;
   border-radius: 50%;
   top: 2px;
-  left: 2px;
+  left: 0px;
   transition: left 0.25s ease;
 }
 
 /* Dark mode */
-
-
 body.dark .switch-thumb {
   left: 38px;
 }
