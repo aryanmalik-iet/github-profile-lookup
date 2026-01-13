@@ -45,20 +45,27 @@ function resetView() {
 async function fetchUser(username) {
   hideError();
   card.classList.add("hidden");
+  searchBtn.disabled = true;
+  searchBtn.textContent = "Loading...";
 
   try {
     const response = await fetch(`https://api.github.com/users/${username}`);
+
 
     if (!response.ok) {
       throw new Error("User not found");
     }
 
     const data = await response.json();
-    renderUser(data);
+        renderUser(data);
   } catch (err) {
     showError("User not found. Please check the username.");
+  } finally {
+    searchBtn.disabled = false;
+    searchBtn.textContent = "Search";
   }
 }
+
 
 function renderUser(user) {
   avatar.src = user.avatar_url;
