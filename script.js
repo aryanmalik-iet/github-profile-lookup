@@ -19,6 +19,13 @@ searchBtn.addEventListener("click", () => {
   fetchUser(username);
 });
 
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    searchBtn.click();
+  }
+});
+
+
 async function fetchUser(username) {
   hideError();
   card.classList.add("hidden");

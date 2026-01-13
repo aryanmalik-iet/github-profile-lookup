@@ -88,6 +88,8 @@ h1 {
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hidden {
@@ -106,12 +108,16 @@ h1 {
   height: 96px;
   border-radius: 50%;
   margin-bottom: 12px;
+  background: #eaeef3;
+  padding: 6px;
 }
+
 
 .stats {
   display: flex;
   justify-content: space-around;
   margin: 16px 0;
+  gap: 16px;
 }
 
 .stats div {
@@ -119,8 +125,14 @@ h1 {
 }
 
 .stats span {
-  font-size: 20px;
+  display: block;
+  font-size: 22px;
   font-weight: 600;
+}
+
+.stats small {
+  color: var(--muted-text);
+  font-size: 12px;
 }
 
 .card a {
@@ -129,5 +141,23 @@ h1 {
   color: var(--accent);
   text-decoration: none;
   font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  .app-container {
+    padding: 16px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .card {
+    padding: 16px;
+  }
 }
 
