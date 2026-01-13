@@ -1,0 +1,50 @@
+:root {
+  --bg-color: #ffffff;
+  --card-bg: #f8f9fa;
+  --text-color: #202124;
+  --muted-text: #5f6368;
+  --accent: #1a73e8; /* Google Blue */
+  --error: #d93025;
+}
+
+body.dark {
+  --bg-color: #0b0f14;
+  --card-bg: #141a22;
+  --text-color: #e8eaed;
+  --muted-text: #9aa0a6;
+  --accent: #00e5ff; /* Arcade Neon Blue */
+  --error: #ff5252;
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 24px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--muted-text);
+  margin-bottom: 24px;
+}
