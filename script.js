@@ -9,6 +9,8 @@ const bioEl = document.getElementById("bio");
 const followersEl = document.getElementById("followers");
 const reposEl = document.getElementById("repos");
 const profileLink = document.getElementById("profileLink");
+const closeBtn = document.getElementById("closeBtn");
+
 
 searchBtn.addEventListener("click", () => {
   const username = input.value.trim();
@@ -24,6 +26,15 @@ input.addEventListener("keydown", (e) => {
     searchBtn.click();
   }
 });
+
+closeBtn.addEventListener("click", resetView);
+
+function resetView() {
+  card.classList.add("hidden");
+  input.value = "";
+  hideError();
+}
+
 
 
 async function fetchUser(username) {
