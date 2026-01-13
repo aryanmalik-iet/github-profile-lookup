@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitHub Profile Lookup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>GitHub Profile Lookup</h1>
+    <p class="subtitle">Find any developer on GitHub instantly</p>
+
+    <div class="search-box">
+      <input type="text" id="usernameInput" placeholder="Enter GitHub username..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="error" class="error hidden"></div>
+
+    <div id="profileCard" class="card hidden">
+      <img id="avatar" />
+      <h2 id="name"></h2>
+      <p id="bio"></p>
+
+      <div class="stats">
+        <div><span id="followers"></span><small>Followers</small></div>
+        <div><span id="repos"></span><small>Repos</small></div>
+      </div>
+
+      <a id="profileLink" target="_blank">View on GitHub</a>
+    </div>
+
+    <footer>
+      Built by Aryan Malik for Google Community IET Lucknow
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
