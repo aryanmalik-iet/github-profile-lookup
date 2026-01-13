@@ -48,3 +48,86 @@ h1 {
   color: var(--muted-text);
   margin-bottom: 24px;
 }
+
+.search-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--accent);
+}
+
+.search-box button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  opacity: 0.9;
+}
+
+.error {
+  background: rgba(217, 48, 37, 0.1);
+  color: var(--error);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
