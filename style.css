@@ -126,6 +126,11 @@ body.dark .theme-toggle .moon {
 
 /* SEARCH & TYPOGRAPHY */
 
+.left-panel {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
   margin-bottom: 6px;
 }
@@ -140,8 +145,9 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 420px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 420px;
+  align-items: stretch;
 }
 
 /* Input + button ro  */
@@ -239,26 +245,24 @@ body.dark .recent-item {
 
 
 /* FEEDBACK & UTILITIES  */
+.error-slot {
+  min-height: 44px; 
+}
 
 .error {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
+  width: 100%;
+  box-sizing: border-box;
   background: rgba(217, 48, 37, 0.1);
   color: var(--error);
   padding: 10px 12px;
   border-radius: 8px;
   margin-top: 8px;
-
   font-size: 14px;
 }
 
-
 .hidden {
-  display: none;
+  visibility: hidden;
 }
-
 
 /* MAIN LAYOUT  */
 

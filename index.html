@@ -24,7 +24,6 @@
     <!-- Main Layout -->
     <div class="main-layout">
 
-      <!-- Left Panel (Search / Controls) -->
       <div class="left-panel">
         <h1>GitHub Profile Lookup</h1>
         <p class="subtitle">Find any developer on GitHub instantly</p>
@@ -36,11 +35,14 @@
               placeholder="Enter GitHub username..."
             />
             <button id="searchBtn">Search</button>
-          </div>
+          </div>      
           <div id="recentSearches" class="recent-searches hidden"></div>
-          <div id="error" class="error hidden"></div>
-        </div>        
+          <div class="error-slot">
+            <div id="error" class="error hidden"></div>
+          </div>
+        </div>
       </div>
+
 
       <!-- Right Panel (Profile Card) -->
       <div class="right-panel">
