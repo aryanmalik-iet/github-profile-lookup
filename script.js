@@ -81,8 +81,16 @@ async function fetchUser(username) {
     );
 
     if (!response.ok) {
-      throw new Error("User not found");
+      if (response.status === 403) {
+        showError("GitHub API rate limit exceeded. Try again later.");
+      } else if (response.status === 404) {
+        showError("User not found");
+      } else {
+        showError("Something went wrong. Please try again.");
+      }
+      return;
     }
+
 
     const data = await response.json();
     renderUser(data);
@@ -135,14 +143,8 @@ function getRecentSearches() {
 
 function saveRecentSearch(username) {
   let searches = getRecentSearches();
-
-  // remove duplicate if exists
   searches = searches.filter(u => u !== username);
-
-  // add to top
   searches.unshift(username);
-
-  // keep only last 5
   if (searches.length > 5) {
     searches = searches.slice(0, 5);
   }
