@@ -8,14 +8,19 @@
 </head>
 <body>
   <div class="app-container">
+    <div class="app-chrome">
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+    <span class="icon moon">☀</span>
+    <span class="icon sun">☾</span>
+    <span class="thumb"></span>
+  </button>
+</div>
+
+    <div class="main-layout">
+      
+
+  <div class="left-panel">
     <h1>GitHub Profile Lookup</h1>
-    <div class="theme-switch" id="themeToggle">
-      <span class="left-icon">◯</span>
-      <span class="right-icon">◐</span>
-      <div class="switch-thumb"></div>
-    </div>
-
-
     <p class="subtitle">Find any developer on GitHub instantly</p>
 
     <div class="search-box">
@@ -24,12 +29,17 @@
     </div>
 
     <div id="error" class="error hidden"></div>
+  </div>
 
+  <div class="right-panel">
     <div id="profileCard" class="card hidden">
-      <button id="closeBtn" class="close-btn">✕</button>
-      <img id="avatar" />
+      <div class="card-header">
+        <button id="closeBtn" class="close-btn">✕</button>
+        <img id="avatar" alt="GitHub user avatar"  />
+      </div>
       <h2 id="name"></h2>
       <p id="bio"></p>
+
       <div class="stats">
         <div><span id="followers"></span><small>Followers</small></div>
         <div><span id="repos"></span><small>Repos</small></div>
@@ -37,6 +47,10 @@
 
       <a id="profileLink" target="_blank">View on GitHub</a>
     </div>
+  </div>
+
+</div>
+
   </div>
   <footer class="app-footer">
   Built by Aryan Malik for Google Community IET Lucknow
