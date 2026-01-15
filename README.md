@@ -57,15 +57,22 @@ No frameworks or libraries were used.
 
 ---
 
+
 ## Project Structure
 
 ├── index.html
-
 ├── style.css
-
 ├── script.js
-
+├── .gitignore
 └── README.md
+
+
+---
+## Links
+
+🔗 Live Site: *https://aryanmalik-iet.github.io/github-profile-lookup/*  
+🔗 Repository: https://github.com/aryanmalik-iet/github-profile-lookup/
+
 
 
 ---
