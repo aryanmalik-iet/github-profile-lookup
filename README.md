@@ -60,11 +60,13 @@ No frameworks or libraries were used.
 
 ## Project Structure
 
+```
 ├── index.html
 ├── style.css
 ├── script.js
 ├── .gitignore
 └── README.md
+```
 
 
 ---
